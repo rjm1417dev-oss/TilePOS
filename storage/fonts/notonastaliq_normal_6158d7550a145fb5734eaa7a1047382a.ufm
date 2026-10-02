@@ -1,0 +1,312 @@
+StartFontMetrics 4.1
+Notice Converted by PHP-font-lib
+Comment https://github.com/dompdf/php-font-lib
+EncodingScheme FontSpecific
+Copyright Copyright 2017 Google Inc. All Rights Reserved.
+FontName Noto Nastaliq Urdu
+FontSubfamily Regular
+UniqueID 2.000;GOOG;NotoNastaliqUrdu-Regular
+FullName Noto Nastaliq Urdu Regular
+Version Version 2.000; ttfautohint (v1.8.3) -l 8 -r 50 -G 200 -x 14 -D arab -f none -a qsq -X ""
+PostScriptName NotoNastaliqUrdu-Regular
+Trademark Noto is a trademark of Google Inc.
+Manufacturer Monotype Imaging Inc.
+Designer Monotype Design Team
+Description Designed by Monotype design team.
+FontVendorURL http://www.google.com/get/noto/
+FontDesignerURL http://www.monotype.com/studio
+LicenseDescription This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+LicenseURL http://scripts.sil.org/OFL
+Weight Medium
+ItalicAngle 0
+IsFixedPitch false
+UnderlineThickness 50
+UnderlinePosition -100
+FontHeightOffset 0
+Ascender 1904
+Descender -596
+FontBBox -379 -1382 4531 1805
+StartCharMetrics 1138
+U 0 ; WX 0 ; N NULL ; G 1
+U 13 ; WX 132 ; N CR ; G 2
+U 32 ; WX 132 ; N space ; G 3
+U 33 ; WX 600 ; N exclam ; G 1100
+U 40 ; WX 380 ; N parenleft ; G 188
+U 41 ; WX 380 ; N parenright ; G 189
+U 43 ; WX 567 ; N plus ; G 180
+U 44 ; WX 357 ; N comma ; G 201
+U 45 ; WX 473 ; N hyphen ; G 181
+U 46 ; WX 258 ; N period ; G 202
+U 47 ; WX 564 ; N slash ; G 182
+U 48 ; WX 554 ; N zero ; G 1108
+U 49 ; WX 554 ; N one ; G 1109
+U 50 ; WX 554 ; N two ; G 1110
+U 51 ; WX 554 ; N three ; G 1111
+U 52 ; WX 554 ; N four ; G 1112
+U 53 ; WX 554 ; N five ; G 1113
+U 54 ; WX 554 ; N six ; G 1114
+U 55 ; WX 554 ; N seven ; G 1115
+U 56 ; WX 554 ; N eight ; G 1116
+U 57 ; WX 554 ; N nine ; G 1117
+U 58 ; WX 317 ; N colon ; G 208
+U 61 ; WX 567 ; N equal ; G 197
+U 91 ; WX 397 ; N bracketleft ; G 183
+U 92 ; WX 543 ; N backslash ; G 184
+U 93 ; WX 397 ; N bracketright ; G 185
+U 123 ; WX 380 ; N braceleft ; G 186
+U 124 ; WX 116 ; N bar ; G 5
+U 125 ; WX 380 ; N braceright ; G 187
+U 160 ; WX 132 ; N uni00A0 ; G 4
+U 171 ; WX 481 ; N guillemotleft ; G 216
+U 183 ; WX 258 ; N periodcentered ; G 209
+U 187 ; WX 481 ; N guillemotright ; G 217
+U 215 ; WX 567 ; N MultiplyArabic ; G 195
+U 247 ; WX 567 ; N DivideArabic ; G 196
+U 1536 ; WX 2065 ; N NumberSign ; G 160
+U 1537 ; WX 1333 ; N Sanah ; G 156
+U 1538 ; WX 1493 ; N Footnote ; G 158
+U 1539 ; WX 1331 ; N Safhah ; G 159
+U 1540 ; WX 2655 ; N Samvat ; G 1002
+U 1545 ; WX 767 ; N PermilleArabic ; G 178
+U 1546 ; WX 973 ; N Per10milleArabic ; G 179
+U 1547 ; WX 331 ; N Afghani ; G 204
+U 1548 ; WX 357 ; N CommaArabic ; G 206
+U 1549 ; WX 529 ; N DateSeparatorArabic ; G 220
+U 1550 ; WX 1583 ; N VerseSign ; G 157
+U 1551 ; WX 872 ; N Misra ; G 155
+U 1552 ; WX 0 ; N SallallahNS ; G 50
+U 1553 ; WX 0 ; N AlayhissalamNS ; G 36
+U 1554 ; WX 0 ; N RahmatullahNS ; G 49
+U 1555 ; WX 0 ; N RadiallahNS ; G 48
+U 1556 ; WX 0 ; N TakhallusNS ; G 65
+U 1563 ; WX 317 ; N SemicolonArabic ; G 207
+U 1564 ; WX 0 ; N ALM ; G 153
+U 1566 ; WX 514 ; N ThreeDotPunct ; G 218
+U 1567 ; WX 476 ; N QuestionmarkArabic ; G 219
+U 1568 ; WX 806 ; N YehKashmiri ; G 832
+U 1569 ; WX 544 ; N Hamza ; G 835
+U 1570 ; WX 330 ; N AlefMadda ; G 836
+U 1571 ; WX 330 ; N AlefHamzaAbove ; G 837
+U 1572 ; WX 422 ; N WawHamza ; G 838
+U 1573 ; WX 330 ; N AlefHamzaBelow ; G 839
+U 1574 ; WX 860 ; N YehHamza ; G 840
+U 1575 ; WX 330 ; N Alef ; G 841
+U 1576 ; WX 1175 ; N Beh ; G 842
+U 1577 ; WX 314 ; N TehMarbuta ; G 843
+U 1578 ; WX 1175 ; N Teh ; G 844
+U 1579 ; WX 1175 ; N Theh ; G 845
+U 1580 ; WX 871 ; N Jeem ; G 846
+U 1581 ; WX 871 ; N Hah ; G 847
+U 1582 ; WX 871 ; N Xah ; G 848
+U 1583 ; WX 300 ; N Dal ; G 849
+U 1584 ; WX 300 ; N Dhal ; G 850
+U 1585 ; WX 406 ; N Reh ; G 851
+U 1586 ; WX 406 ; N Zain ; G 852
+U 1587 ; WX 1113 ; N Seen ; G 853
+U 1588 ; WX 1113 ; N Sheen ; G 854
+U 1589 ; WX 1241 ; N Sad ; G 855
+U 1590 ; WX 1241 ; N Dad ; G 856
+U 1591 ; WX 653 ; N Tah ; G 857
+U 1592 ; WX 653 ; N Zah ; G 858
+U 1593 ; WX 872 ; N Ain ; G 859
+U 1594 ; WX 872 ; N Ghain ; G 860
+U 1595 ; WX 1159 ; N uni063B ; G 898
+U 1596 ; WX 1159 ; N uni063C ; G 900
+U 1597 ; WX 860 ; N uni063D ; G 901
+U 1598 ; WX 860 ; N uni063E ; G 902
+U 1599 ; WX 860 ; N uni063F ; G 903
+U 1600 ; WX 65 ; N Tatweel ; G 230
+U 1601 ; WX 1217 ; N Feh ; G 861
+U 1602 ; WX 855 ; N Qaf ; G 862
+U 1603 ; WX 1159 ; N Kaf ; G 863
+U 1604 ; WX 851 ; N Lam ; G 864
+U 1605 ; WX 660 ; N Meem ; G 865
+U 1606 ; WX 861 ; N Noon ; G 866
+U 1607 ; WX 563 ; N Heh ; G 867
+U 1608 ; WX 422 ; N Waw ; G 868
+U 1609 ; WX 860 ; N AlefMaqsura ; G 869
+U 1610 ; WX 860 ; N Yeh ; G 870
+U 1611 ; WX 0 ; N FathatanNS ; G 43
+U 1612 ; WX 0 ; N DammatanNS ; G 41
+U 1613 ; WX 0 ; N KasratanNS ; G 45
+U 1614 ; WX 0 ; N FathaNS ; G 42
+U 1615 ; WX 0 ; N DammaNS ; G 39
+U 1616 ; WX 0 ; N KasraNS ; G 44
+U 1617 ; WX 0 ; N ShaddaNS ; G 51
+U 1618 ; WX 0 ; N SukunJazmNS ; G 56
+U 1619 ; WX 0 ; N MaddaNS ; G 28
+U 1620 ; WX 0 ; N HamzaAboveNS ; G 32
+U 1621 ; WX 0 ; N HamzaBelowNS ; G 33
+U 1622 ; WX 0 ; N AlefInferiorNS ; G 38
+U 1623 ; WX 0 ; N UltapeshNS ; G 40
+U 1624 ; WX 0 ; N NoonGhunnaMarkNS ; G 46
+U 1625 ; WX 0 ; N ZwarakayNS ; G 147
+U 1629 ; WX 0 ; N DammaRevNS ; G 150
+U 1630 ; WX 0 ; N Fatha2dotsNS ; G 126
+U 1631 ; WX 0 ; N WavyHamzaBelowNS ; G 78
+U 1632 ; WX 409 ; N ZeroArabic ; G 161
+U 1633 ; WX 567 ; N OneArabic ; G 162
+U 1634 ; WX 567 ; N TwoArabic ; G 163
+U 1635 ; WX 567 ; N ThreeArabic ; G 164
+U 1636 ; WX 565 ; N FourArabic ; G 165
+U 1637 ; WX 567 ; N FiveArabic ; G 166
+U 1638 ; WX 567 ; N SixArabic ; G 167
+U 1639 ; WX 567 ; N SevenArabic ; G 168
+U 1640 ; WX 567 ; N EightArabic ; G 169
+U 1641 ; WX 567 ; N NineArabic ; G 170
+U 1642 ; WX 567 ; N PercentArabic ; G 177
+U 1643 ; WX 285 ; N DecimalPointArabic ; G 198
+U 1644 ; WX 285 ; N ThousandMarkerArabic ; G 200
+U 1645 ; WX 525 ; N AsteriskArabic ; G 221
+U 1646 ; WX 1175 ; N Behx ; G 871
+U 1647 ; WX 855 ; N Qafx ; G 872
+U 1648 ; WX 0 ; N AlefSuperiorNS ; G 37
+U 1649 ; WX 330 ; N AlefWasla ; G 873
+U 1650 ; WX 330 ; N AlefWavyHamzaAbove ; G 874
+U 1651 ; WX 330 ; N AlefWavyHamzaBelow ; G 875
+U 1657 ; WX 1175 ; N TehTahAbove ; G 876
+U 1658 ; WX 1175 ; N uni067A ; G 904
+U 1659 ; WX 1175 ; N uni067B ; G 905
+U 1660 ; WX 1175 ; N uni067C ; G 906
+U 1661 ; WX 1175 ; N uni067D ; G 908
+U 1662 ; WX 1175 ; N Peh ; G 877
+U 1663 ; WX 1175 ; N uni067F ; G 910
+U 1664 ; WX 1175 ; N uni0680 ; G 909
+U 1665 ; WX 871 ; N uni0681 ; G 911
+U 1667 ; WX 871 ; N uni0683 ; G 912
+U 1668 ; WX 871 ; N uni0684 ; G 913
+U 1669 ; WX 871 ; N uni0685 ; G 914
+U 1670 ; WX 871 ; N Tcheh ; G 878
+U 1671 ; WX 871 ; N uni0687 ; G 915
+U 1672 ; WX 300 ; N DalTahAbove ; G 879
+U 1673 ; WX 300 ; N uni0689 ; G 916
+U 1674 ; WX 300 ; N uni068A ; G 917
+U 1675 ; WX 300 ; N uni068B ; G 918
+U 1676 ; WX 300 ; N uni068C ; G 919
+U 1677 ; WX 300 ; N uni068D ; G 920
+U 1678 ; WX 300 ; N uni068E ; G 921
+U 1679 ; WX 300 ; N uni068F ; G 922
+U 1681 ; WX 406 ; N RehTahAbove ; G 880
+U 1683 ; WX 406 ; N uni0693 ; G 923
+U 1686 ; WX 406 ; N uni0696 ; G 924
+U 1688 ; WX 406 ; N Zheh ; G 881
+U 1689 ; WX 406 ; N uni0699 ; G 925
+U 1690 ; WX 1113 ; N uni069A ; G 926
+U 1694 ; WX 1241 ; N uni069E ; G 927
+U 1697 ; WX 1217 ; N Fehx ; G 882
+U 1700 ; WX 1217 ; N Veh ; G 883
+U 1702 ; WX 1217 ; N uni06A6 ; G 928
+U 1705 ; WX 1159 ; N KafFarsi ; G 884
+U 1707 ; WX 1159 ; N uni06AB ; G 929
+U 1711 ; WX 1159 ; N Gaf ; G 885
+U 1712 ; WX 1159 ; N uni06B0 ; G 930
+U 1713 ; WX 1159 ; N uni06B1 ; G 931
+U 1715 ; WX 1159 ; N uni06B3 ; G 932
+U 1719 ; WX 851 ; N uni06B7 ; G 933
+U 1722 ; WX 861 ; N NoonGhunna ; G 886
+U 1723 ; WX 861 ; N uni06BB ; G 934
+U 1724 ; WX 861 ; N uni06BC ; G 935
+U 1726 ; WX 655 ; N HehDoachasmee ; G 887
+U 1728 ; WX 314 ; N HehHamza ; G 888
+U 1729 ; WX 314 ; N HehUrdu ; G 889
+U 1730 ; WX 314 ; N HehHamzaUrdu ; G 890
+U 1731 ; WX 314 ; N TehMarbutaUrdu ; G 891
+U 1732 ; WX 422 ; N uni06C4 ; G 936
+U 1734 ; WX 422 ; N uni06C6 ; G 892
+U 1735 ; WX 422 ; N uni06C7 ; G 893
+U 1738 ; WX 422 ; N uni06CA ; G 894
+U 1740 ; WX 860 ; N YehFarsi ; G 895
+U 1741 ; WX 860 ; N uni06CD ; G 937
+U 1744 ; WX 860 ; N uni06D0 ; G 938
+U 1746 ; WX 1409 ; N YehBarree ; G 896
+U 1747 ; WX 1409 ; N YehBarreeHamza ; G 897
+U 1748 ; WX 663 ; N PeriodUrdu ; G 203
+U 1749 ; WX 314 ; N uni06D5 ; G 939
+U 1757 ; WX 1724 ; N AyahEnd ; G 940
+U 1758 ; WX 1754 ; N k_RubElHizb ; G 1066
+U 1760 ; WX 0 ; N SukunZeroNS ; G 58
+U 1761 ; WX 0 ; N SukunHahNS ; G 55
+U 1769 ; WX 1422 ; N k_Sajdah ; G 1067
+U 1774 ; WX 300 ; N uni06EE ; G 941
+U 1775 ; WX 406 ; N uni06EF ; G 942
+U 1776 ; WX 409 ; N ZeroFarsi ; G 1038
+U 1777 ; WX 567 ; N OneFarsi ; G 1039
+U 1778 ; WX 567 ; N TwoFarsi ; G 1040
+U 1779 ; WX 567 ; N ThreeFarsi ; G 1041
+U 1780 ; WX 567 ; N FourUrdu ; G 174
+U 1781 ; WX 567 ; N FiveFarsi ; G 172
+U 1782 ; WX 567 ; N SixUrdu ; G 175
+U 1783 ; WX 567 ; N SevenUrdu ; G 176
+U 1784 ; WX 567 ; N EightFarsi ; G 1043
+U 1785 ; WX 567 ; N NineFarsi ; G 1044
+U 1791 ; WX 655 ; N uni06FF ; G 943
+U 1881 ; WX 300 ; N uni0759 ; G 944
+U 1884 ; WX 1113 ; N uni075C ; G 945
+U 1891 ; WX 1159 ; N uni0763 ; G 946
+U 1895 ; WX 861 ; N uni0767 ; G 948
+U 1896 ; WX 861 ; N uni0768 ; G 949
+U 1897 ; WX 861 ; N uni0769 ; G 950
+U 1898 ; WX 851 ; N uni076A ; G 970
+U 1899 ; WX 406 ; N uni076B ; G 951
+U 1900 ; WX 406 ; N uni076C ; G 952
+U 1901 ; WX 1113 ; N uni076D ; G 953
+U 1902 ; WX 871 ; N uni076E ; G 954
+U 1903 ; WX 871 ; N uni076F ; G 955
+U 1904 ; WX 1113 ; N uni0770 ; G 956
+U 1905 ; WX 406 ; N uni0771 ; G 957
+U 1906 ; WX 871 ; N uni0772 ; G 958
+U 1907 ; WX 330 ; N uni0773 ; G 959
+U 1908 ; WX 330 ; N uni0774 ; G 960
+U 1909 ; WX 860 ; N uni0775 ; G 961
+U 1910 ; WX 860 ; N uni0776 ; G 962
+U 1911 ; WX 860 ; N uni0777 ; G 963
+U 1912 ; WX 422 ; N uni0778 ; G 964
+U 1913 ; WX 422 ; N uni0779 ; G 965
+U 1914 ; WX 1409 ; N uni077A ; G 966
+U 1915 ; WX 1409 ; N uni077B ; G 967
+U 1916 ; WX 871 ; N uni077C ; G 968
+U 1917 ; WX 1113 ; N uni077D ; G 969
+U 2303 ; WX 0 ; N ShortVwlNS ; G 136
+U 8203 ; WX 0 ; N ZWSP ; G 7
+U 8204 ; WX 0 ; N uni200C ; G 6
+U 8205 ; WX 0 ; N uni200D ; G 8
+U 8206 ; WX 0 ; N uni200E ; G 9
+U 8207 ; WX 0 ; N uni200F ; G 10
+U 8208 ; WX 473 ; N uni2010 ; G 190
+U 8209 ; WX 473 ; N uni2011 ; G 191
+U 8211 ; WX 513 ; N endash ; G 192
+U 8212 ; WX 696 ; N emdash ; G 193
+U 8216 ; WX 307 ; N QuoteSingleLeftArabic ; G 210
+U 8217 ; WX 307 ; N QuoteSingleRightArabic ; G 211
+U 8220 ; WX 526 ; N quotedblleft ; G 212
+U 8221 ; WX 526 ; N quotedblright ; G 213
+U 8249 ; WX 305 ; N guilsinglleft ; G 214
+U 8250 ; WX 305 ; N guilsinglright ; G 215
+U 8722 ; WX 567 ; N MinusArabic ; G 194
+U 9676 ; WX 789 ; N uni25CC ; G 154
+U 64434 ; WX 229 ; N uniFBB2 ; G 1045
+U 64435 ; WX 229 ; N OneDotBelow ; G 1051
+U 64436 ; WX 378 ; N uniFBB4 ; G 1046
+U 64437 ; WX 378 ; N uniFBB5 ; G 1052
+U 64438 ; WX 378 ; N uniFBB6 ; G 1048
+U 64439 ; WX 378 ; N uniFBB7 ; G 1049
+U 64440 ; WX 378 ; N uniFBB8 ; G 1055
+U 64441 ; WX 378 ; N uniFBB9 ; G 1054
+U 64442 ; WX 378 ; N uniFBBA ; G 1050
+U 64443 ; WX 378 ; N uniFBBB ; G 1056
+U 64444 ; WX 246 ; N uniFBBC ; G 1057
+U 64445 ; WX 229 ; N uniFBBD ; G 1047
+U 64446 ; WX 229 ; N uniFBBE ; G 1053
+U 64447 ; WX 211 ; N uniFBBF ; G 1063
+U 64448 ; WX 325 ; N uniFBC0 ; G 1058
+U 64449 ; WX 325 ; N uniFBC1 ; G 1059
+U 64830 ; WX 1272 ; N OrnateLeftParenthesis ; G 1064
+U 64831 ; WX 1272 ; N OrnateRightParenthesis ; G 1065
+U 65010 ; WX 1116 ; N Divine_nm ; G 223
+U 65012 ; WX 1099 ; N Mhmd ; G 225
+U 65018 ; WX 2586 ; N uniFDFA ; G 227
+U 65019 ; WX 2312 ; N uniFDFB ; G 229
+U 65020 ; WX 1318 ; N uniFDFC ; G 228
+U 65021 ; WX 4619 ; N uniFDFD ; G 226
+EndCharMetrics
+EndFontMetrics

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ $quotation->quotation_number }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --font-latin: 'Roboto', Arial, sans-serif;
+            --font-urdu: 'Noto Nastaliq Urdu', serif;
+            --border: 1px solid #1f2129;
+            --dotted: 1px dotted #8590a8;
+        }
+
+        html, body {
+            width: 80mm;
+            font-family: var(--font-latin);
+            font-size: 8.5px;
+            color: #1f2129;
+            background: #fbfaf7;
+        }
+
+        /* ── Wrapper ──────────────────────────── */
+        .receipt {
+            width: 80mm;
+            padding: 4mm 5mm 6mm;
+        }
+
+        /* ── Shop Header ──────────────────────── */
+        .shop-name {
+            font-size: 14px;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+        }
+        .shop-logo {
+            text-align: center;
+            margin-bottom: 4px;
+        }
+        .shop-logo img {
+            max-width: 50mm;
+            max-height: 16mm;
+            object-fit: contain;
+        }
+        .shop-sub {
+            font-size: 7.5px;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        /* ── Document label ───────────────────── */
+        .doc-label {
+            font-size: 12px;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: underline;
+            margin: 6px 0 5px;
+        }
+
+        /* ── Meta block ───────────────────────── */
+        .meta {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 5px;
+            font-size: 7.5px;
+        }
+        .meta td {
+            padding: 1.5px 2px;
+        }
+        .meta .lbl { font-weight: 600; width: 22%; }
+        .meta .val { width: 28%; }
+        .meta .lbl2 { font-weight: 600; width: 22%; text-align: right; }
+        .meta .val2 { text-align: right; width: 28%; }
+
+        /* ── Items table ──────────────────────── */
+        .items {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 7px;
+            margin-bottom: 2px;
+        }
+        .items thead tr {
+            border-top: var(--border);
+            border-bottom: var(--border);
+        }
+        .items th {
+            padding: 2px 2px;
+            font-weight: 700;
+            text-align: left;
+            white-space: nowrap;
+        }
+        .items td {
+            padding: 2.5px 2px;
+            border-bottom: var(--dotted);
+            vertical-align: top;
+        }
+        .r { text-align: right; }
+        .c { text-align: center; }
+
+        /* ── Items count ──────────────────────── */
+        .items-count {
+            font-size: 7px;
+            margin: 3px 0;
+        }
+
+        /* ── Summary ──────────────────────────── */
+        .summary {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 8px;
+        }
+        .summary td { padding: 1.5px 2px; }
+        .summary .sl { width: 55%; }
+        .summary .sr { text-align: right; width: 45%; }
+        .summary .grand {
+            font-weight: 700;
+            font-size: 10px;
+            border-top: var(--border);
+            border-bottom: var(--border);
+        }
+        .summary .grand td { padding: 2.5px 2px; }
+
+        /* ── Payment ──────────────────────────── */
+        .payment {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 8px;
+            margin-top: 4px;
+        }
+        .payment td { padding: 1.5px 2px; }
+        .payment .pr { text-align: right; }
+
+        /* ── Divider ──────────────────────────── */
+        .divider {
+            border: none;
+            border-top: var(--border);
+            margin: 4px 0;
+        }
+        .divider-dot {
+            border: none;
+            border-top: var(--dotted);
+            margin: 5px 0;
+        }
+
+        /* ── Urdu terms (front) ───────────────── */
+        .urdu-terms {
+            font-family: var(--font-urdu);
+            direction: rtl;
+            text-align: right;
+            font-size: 10px;
+            line-height: 2.2;
+            margin-top: 6px;
+        }
+
+        /* ── Software footer ──────────────────── */
+        .sw-footer {
+            font-size: 6.5px;
+            text-align: center;
+            color: #525a73;
+            margin-top: 6px;
+        }
+
+        /* ── Back page ────────────────────────── */
+        .back-page {
+            page-break-before: always;
+            padding: 4mm 5mm;
+        }
+        .back-border {
+            border: 2.5px solid #1f2129;
+            padding: 8px;
+        }
+        .back-list {
+            font-family: var(--font-urdu);
+            direction: rtl;
+            text-align: right;
+            font-size: 10px;
+            line-height: 2;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .back-list td {
+            vertical-align: top;
+            padding-bottom: 5px;
+        }
+        .back-list td.num {
+            width: 22px;
+            text-align: right;
+            direction: ltr;
+            font-family: var(--font-latin);
+            font-weight: 700;
+            font-size: 8px;
+            padding-top: 4px;
+            padding-left: 0;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+@php
+    $tenant    = $quotation->tenant;
+    $shopName  = $tenant?->business_name ?? config('app.name');
+    $shopAddr  = $tenant?->business_address ?? '';
+    $shopPh    = $tenant?->business_phone ?? '';
+    $shopCell  = config('receipt.cell_phone');
+    $docLabel  = $quotation->type === 'invoice' ? 'INVOICE' : 'ESTIMATE';
+    $billNo    = $quotation->quotation_number;
+    $invDate   = $quotation->invoice_date ?? $quotation->created_at ?? now();
+    $invTime   = $invDate->format('h:i:sA');
+    $cashier   = config('receipt.cashier_label', 'POS');
+    $sub       = $subtotal ?? $quotation->items->sum('subtotal');
+    $grand     = (float) $quotation->total_amount;
+    $payMethod = strtoupper($quotation->payment_method ?? 'CASH');
+    $paid      = (float) ($quotation->paid_amount ?? 0);
+    $change    = max(0, $paid - $grand);
+    $swFooter  = config('receipt.software_provider', 'Software Provided By. IPCS, Rwp. 0332-5173356');
+@endphp
+
+{{-- ══════════════ FRONT ══════════════ --}}
+<div class="receipt">
+
+    {{-- Header --}}
+    @if(!empty($logoBase64))
+    <div class="shop-logo">
+        <img src="{{ $logoBase64 }}" alt="{{ $shopName }}">
+    </div>
+    @endif
+    <div class="shop-name">{{ $shopName }}</div>
+    @if($shopAddr)<div class="shop-sub">{{ $shopAddr }}</div>@endif
+    @if($shopPh || $shopCell)
+    <div class="shop-sub">
+        @if($shopPh)Ph: {{ $shopPh }}@endif
+        @if($shopCell) &nbsp; Cell: {{ $shopCell }}@endif
+    </div>
+    @endif
+
+    <div class="doc-label">{{ $docLabel }}</div>
+
+    {{-- Meta --}}
+    <table class="meta">
+        <tr>
+            <td class="lbl">Date</td>
+            <td class="val">{{ $invDate->format('d M Y') }}</td>
+            <td class="lbl2">Time</td>
+            <td class="val2">{{ $invTime }}</td>
+        </tr>
+        <tr>
+            <td class="lbl">Cashier:</td>
+            <td class="val">{{ $cashier }}</td>
+            <td class="lbl2">Bill #</td>
+            <td class="val2">{{ $billNo }}</td>
+        </tr>
+    </table>
+
+    {{-- Items --}}
+    <table class="items">
+        <thead>
+            <tr>
+                <th style="width:15%">ItemCode</th>
+                <th style="width:30%">Description</th>
+                <th class="c" style="width:11%">Qty</th>
+                <th class="c" style="width:9%">Unit</th>
+                <th class="r" style="width:17%">Rate</th>
+                <th class="r" style="width:18%">Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($quotation->items as $item)
+            <tr>
+                <td>{{ $item->tile?->tile_code ?? ($item->product_id ? 'P'.$item->product_id : '—') }}</td>
+                <td>{{ $item->item_name }}</td>
+                <td class="c">
+                    @if($item->item_type === 'tile')
+                        {{ number_format((float)($item->boxes_required ?? $item->quantity), 2) }}
+                    @else
+                        {{ number_format((float)$item->quantity, 2) }}
+                    @endif
+                </td>
+                <td class="c">{{ $item->item_type === 'tile' ? 'BOX' : 'PCS' }}</td>
+                <td class="r">{{ number_format((float)$item->unit_price, 2) }}</td>
+                <td class="r">{{ number_format((float)$item->subtotal, 2) }}</td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+
+    <div class="items-count">Items: {{ $quotation->items->count() }}</div>
+
+    {{-- Summary --}}
+    <table class="summary">
+        <tr>
+            <td class="sl">Sub Total</td>
+            <td class="sr">{{ number_format((float)$sub, 2) }}</td>
+        </tr>
+        @if((float)$quotation->discount_amount > 0)
+        <tr>
+            <td class="sl">Discount ({{ number_format((float)$quotation->discount_percentage, 0) }}%)</td>
+            <td class="sr">- {{ number_format((float)$quotation->discount_amount, 2) }}</td>
+        </tr>
+        @endif
+        @if((float)$quotation->tax_amount > 0)
+        <tr>
+            <td class="sl">Tax ({{ number_format((float)$quotation->tax_percentage, 0) }}%)</td>
+            <td class="sr">{{ number_format((float)$quotation->tax_amount, 2) }}</td>
+        </tr>
+        @endif
+        <tr class="grand">
+            <td class="sl">Grand Total</td>
+            <td class="sr">{{ number_format($grand, 2) }}</td>
+        </tr>
+    </table>
+
+    {{-- Payment --}}
+    <table class="payment">
+        <tr>
+            <td style="width:50%">Payment</td>
+            <td class="pr" style="width:50%">{{ $payMethod }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="pr">{{ number_format($paid, 2) }}</td>
+        </tr>
+        <tr>
+            <td>Change</td>
+            <td class="pr">{{ number_format($change, 2) }}</td>
+        </tr>
+    </table>
+
+    {{-- Urdu front terms --}}
+    <hr class="divider-dot">
+    <div class="urdu-terms">
+        <div>مال کی واپسی یا تبدیلی 21 دن کے اندر ہو گی</div>
+        <div>ٹوٹی، کھلی، یا گیلی ٹائل کی واپسی یا تبدیلی نہیں ہو گی</div>
+        <div>بل کے بغیر واپسی یا تبدیلی نہیں ہو گی</div>
+        <div>امپورٹڈ مال کی واپسی یا تبدیلی نہیں ہو گی</div>
+        <div>کل مال کی واپسی پر %25 کٹوتی ہو گی</div>
+        <div>گارنٹی، کلیم کمپنی کی شرائط کے مطابق ہو گی</div>
+        <div>واپسی 12 بجے کے بعد ہوگی</div>
+    </div>
+
+    <div class="sw-footer">{{ $swFooter }}</div>
+
+</div>
+
+{{-- ══════════════ BACK ══════════════ --}}
+<div class="back-page">
+    <div class="back-border">
+        <table class="back-list">
+            <tr>
+                <td class="num">.1</td>
+                <td>مال واپس یا تبدیل کرنے کے لیے بل ہمراہ لائیں</td>
+            </tr>
+            <tr>
+                <td class="num">.2</td>
+                <td>پیک مال کی تبدیلی یا واپسی 21 دن کے اندر ہوگی اور مکمل سامان واپسی یا مکمل سامان تبدیلی کی صورت میں لیبر چار جز دینے ہوں گے۔</td>
+            </tr>
+            <tr>
+                <td class="num">.3</td>
+                <td>مال گودام سے لیتے وقت ٹوٹ پھوٹ کی تسلی کائن بلا کرلیں ۔ بعد میں ہماری کوئی ذمہ داری نہیں ہوگی ۔</td>
+            </tr>
+            <tr>
+                <td class="num">.4</td>
+                <td>گیلی کھلی اور ٹوٹی ٹائل کی کسی صورت میں واپسی نہیں ہوگی۔</td>
+            </tr>
+            <tr>
+                <td class="num">.5</td>
+                <td>ٹائل لگانے کے بعد کھلی ٹائل بچ جانے کی صورت میں اس کو سنبھال کے رکھیں تا کہ آئندہ آنے والی میشیننس یا مرمت میں آپ کو کام آسکے۔</td>
+            </tr>
+            <tr>
+                <td class="num">.6</td>
+                <td>فرسی امور کی ٹائل کی واپسی کسی صورت میں نہیں ہوگی۔</td>
+            </tr>
+            <tr>
+                <td class="num">.7</td>
+                <td>ٹائل کی پیکنگ ایک جیسی ہونے کی وجہ سے غدار رنگ ڈلیور ہو سکتا ہے لہذا لگانے سے پہلے چیک کریں۔ کوئی بھی مکمل آئٹم واپس کرنے کی صورت میں %35 کٹوتی ہوگی۔</td>
+            </tr>
+            <tr>
+                <td class="num">.8</td>
+                <td>ٹائل میں کسی بھی قسم کے نقص کی صورت میں ٹائل لگانے سے پہلے تبدیل کی جاسکتی ہے۔</td>
+            </tr>
+            <tr>
+                <td class="num">.9</td>
+                <td>ٹائل لگانے کے بعد ہماری کوئی ذمہ داری نہیں ہوگی۔</td>
+            </tr>
+            <tr>
+                <td class="num">.10</td>
+                <td>امپورٹڈ مال کی کوئی گارنٹی نہیں۔</td>
+            </tr>
+            <tr>
+                <td class="num">.11</td>
+                <td>ٹائل کے سارے کارٹن احتیاط سے ایک ساتھ کھولیں اور اگر کوئی ٹائل ٹوٹی ہوئی نکلے تو اسے کٹنگ میں استعمال کریں۔</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

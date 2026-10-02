@@ -1,0 +1,59 @@
+user www-data;
+pid /tmp/nginx.pid;
+
+worker_processes auto;
+
+error_log /dev/stderr warn;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    include /etc/nginx/mime.types;
+    default_type application/octet-stream;
+
+    access_log /dev/stdout;
+
+    sendfile on;
+
+    client_body_temp_path /tmp/nginx-client-body;
+    fastcgi_temp_path /tmp/nginx-fastcgi;
+
+    server {
+        listen ${PORT};
+        listen [::]:${PORT};
+
+        server_name _;
+
+        root /var/www/html/public;
+        index index.php;
+
+        # Nginx-only health check
+        location = /healthz {
+            default_type text/plain;
+            return 200 "nginx-ok\n";
+        }
+
+        location / {
+            try_files $uri $uri/ /index.php?$query_string;
+        }
+
+        location ~ \.php$ {
+            try_files $uri =404;
+
+            include /etc/nginx/fastcgi_params;
+
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            fastcgi_param DOCUMENT_ROOT $document_root;
+
+            fastcgi_pass 127.0.0.1:9000;
+
+            fastcgi_read_timeout 120s;
+        }
+
+        location ~ /\. {
+            deny all;
+        }
+    }
+}

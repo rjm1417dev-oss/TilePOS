@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap')
+layer(base);
+@import 'tailwindcss';
+
+@import 'tw-animate-css';
+
+@source '../views';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+    --font-sans:
+        'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+        'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --radius-lg: var(--radius);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-sm: calc(var(--radius) - 4px);
+
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+
+    --color-destructive: var(--destructive);
+    --color-destructive-foreground: var(--destructive-foreground);
+
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+
+    --color-sidebar: var(--sidebar);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-ring: var(--sidebar-ring);
+
+    /* Custom colors mapping */
+    --color-clay-50: #faf6f2;
+    --color-clay-100: #f3e9e0;
+    --color-clay-200: #e6d3c2;
+    --color-clay-300: #d4b594;
+    --color-clay-400: #bf9066;
+    --color-clay-500: #a87344;
+    --color-clay-600: #8f5c36;
+    --color-clay-700: #74482c;
+    --color-clay-800: #5f3a26;
+    --color-clay-900: #4e3022;
+    --color-clay-950: #2b1810;
+
+    --color-slatey-50: #f6f7f9;
+    --color-slatey-100: #eceef2;
+    --color-slatey-200: #d5d9e2;
+    --color-slatey-300: #b0b7c6;
+    --color-slatey-400: #8590a8;
+    --color-slatey-500: #67718d;
+    --color-slatey-600: #525a73;
+    --color-slatey-700: #43495d;
+    --color-slatey-800: #3a3f4f;
+    --color-slatey-900: #333643;
+    --color-slatey-950: #1f2129;
+
+    --color-sand-50: #fbfaf7;
+    --color-sand-100: #f4f1ea;
+    --color-sand-200: #e9e2d3;
+    --color-sand-300: #d8ccb4;
+    --color-sand-400: #c2b08c;
+    --color-sand-500: #b09a72;
+
+    --font-display:
+        'Sora', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+        'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* Bolt landing page color scales */
+    --color-brand-50: #f0fdfa;
+    --color-brand-100: #ccfbf1;
+    --color-brand-200: #99f6e4;
+    --color-brand-300: #5eead4;
+    --color-brand-400: #2dd4bf;
+    --color-brand-500: #22a599;
+    --color-brand-600: #16837a;
+    --color-brand-700: #0f766e;
+    --color-brand-800: #115e59;
+    --color-brand-900: #134e4a;
+    --color-brand-950: #042f2e;
+
+    --color-ink-50: #f7f7f8;
+    --color-ink-100: #eeeef0;
+    --color-ink-200: #d9dade;
+    --color-ink-300: #b8bac4;
+    --color-ink-400: #9295a4;
+    --color-ink-500: #74778a;
+    --color-ink-600: #5c5f6e;
+    --color-ink-700: #4b4d59;
+    --color-ink-800: #41434d;
+    --color-ink-900: #3a3c44;
+    --color-ink-950: #22252e;
+
+    --color-accent-50: #fffbeb;
+    --color-accent-100: #fef3c7;
+    --color-accent-200: #fde68a;
+    --color-accent-300: #fcd34d;
+    --color-accent-400: #fbbf24;
+    --color-accent-500: #f59e0b;
+    --color-accent-600: #d97706;
+    --color-accent-700: #b45309;
+    --color-accent-800: #92400e;
+    --color-accent-900: #78350f;
+    --color-accent-950: #451a03;
+}
+
+:root {
+    --background: #ffffff;
+    --foreground: #22252e;
+    --card: #ffffff;
+    --card-foreground: #22252e;
+    --popover: #ffffff;
+    --popover-foreground: #22252e;
+    --primary: #16837a;
+    --primary-foreground: #ffffff;
+    --secondary: #f0fdfa;
+    --secondary-foreground: #22252e;
+    --muted: #f7f7f8;
+    --muted-foreground: #74778a;
+    --accent: #f0fdfa;
+    --accent-foreground: #22252e;
+    --destructive: #dc2626;
+    --destructive-foreground: #ffffff;
+    --border: #eeeef0;
+    --input: #d9dade;
+    --ring: #22a599;
+    --chart-1: #22a599;
+    --chart-2: #16837a;
+    --chart-3: #f59e0b;
+    --chart-4: #d97706;
+    --chart-5: #74778a;
+    --radius: 0.625rem;
+    --sidebar: #ffffff;
+    --sidebar-foreground: #22252e;
+    --sidebar-primary: #16837a;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #f0fdfa;
+    --sidebar-accent-foreground: #22252e;
+    --sidebar-border: #eeeef0;
+    --sidebar-ring: #22a599;
+}
+
+.dark {
+    --background: #020617;
+    --foreground: #f8fafc;
+    --card: #0f172a;
+    --card-foreground: #f8fafc;
+    --popover: #0f172a;
+    --popover-foreground: #f8fafc;
+    --primary: #14b8a6;
+    --primary-foreground: #ffffff;
+    --secondary: #1e293b;
+    --secondary-foreground: #f8fafc;
+    --muted: #1e293b;
+    --muted-foreground: #94a3b8;
+    --accent: #1e293b;
+    --accent-foreground: #f8fafc;
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --border: #1e293b;
+    --input: #1e293b;
+    --ring: #14b8a6;
+    --chart-1: #14b8a6;
+    --chart-2: #2dd4bf;
+    --chart-3: #fbbf24;
+    --chart-4: #f59e0b;
+    --chart-5: #94a3b8;
+    --radius: 0.625rem;
+    --sidebar: #020617;
+    --sidebar-foreground: #f8fafc;
+    --sidebar-primary: #14b8a6;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #1e293b;
+    --sidebar-accent-foreground: #f8fafc;
+    --sidebar-border: #1e293b;
+    --sidebar-ring: #14b8a6;
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+/* Landing page animations */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes gradient-shift {
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+}
+
+/* ───────────────────────────────────────────────
+   Bolt landing page utilities
+   ─────────────────────────────────────────────── */
+
+/* Numeric font weights (used by Bolt-generated components) */
+.font-500 {
+    font-weight: 500;
+}
+.font-600 {
+    font-weight: 600;
+}
+.font-700 {
+    font-weight: 700;
+}
+.font-800 {
+    font-weight: 800;
+}
+
+/* Gradient text used in the hero headline */
+.text-gradient {
+    background: linear-gradient(120deg, #16837a 0%, #22a599 50%, #42c0b3 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Subtle grid / dot background patterns */
+.bg-grid {
+    background-image:
+        linear-gradient(to right, rgba(20, 84, 81, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(20, 84, 81, 0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+}
+
+.bg-dots {
+    background-image: radial-gradient(
+        rgba(20, 84, 81, 0.08) 1px,
+        transparent 1px
+    );
+    background-size: 22px 22px;
+}
+
+/* Landing page shadow tokens */
+.shadow-card {
+    box-shadow: 0 10px 40px -10px rgba(34, 37, 46, 0.12);
+}
+
+.shadow-soft {
+    box-shadow: 0 4px 20px -4px rgba(34, 37, 46, 0.08);
+}
+
+.shadow-glow {
+    box-shadow: 0 8px 30px -6px rgba(22, 131, 122, 0.25);
+}
+
+/* Reveal-on-scroll (intersection observer toggles .is-visible) */
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+        opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Landing page scrollbar (matches Bolt styling) */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f6f7f9;
+}
+::-webkit-scrollbar-thumb {
+    background: #b0b9c9;
+    border-radius: 8px;
+    border: 2px solid #f6f7f9;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #8593a9;
+}
+
+/* Fade-up entrance animation used by the hero */
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.animate-fade-up {
+    animation: fade-up 0.8s ease-out forwards;
+}
+
+/* Pulsing ring used in the "New" badge in the navbar */
+@keyframes pulse-ring {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(2.4);
+        opacity: 0;
+    }
+}
+.animate-pulse-ring {
+    animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+/* Infinite logo marquee used by the LogoMarquee section */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+.animate-marquee {
+    animation: marquee 30s linear infinite;
+}
+
+/* Card hover lift effect */
+.card-lift {
+    transition:
+        transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.35s ease;
+}
+.card-lift:hover {
+    transform: translateY(-6px);
+}
+
+/* ───────────────────────────────────────────────
+   TilePOS Dashboard premium utilities
+   ─────────────────────────────────────────────── */
+
+/* Premium card surface: layered soft shadows with subtle border glow */
+.shadow-card-premium {
+    box-shadow:
+        0 1px 1px -0.5px rgba(34, 37, 46, 0.03),
+        0 3px 3px -1.5px rgba(34, 37, 46, 0.04),
+        0 6px 6px -3px rgba(34, 37, 46, 0.04),
+        0 12px 12px -6px rgba(34, 37, 46, 0.04),
+        0 24px 24px -12px rgba(34, 37, 46, 0.03);
+    @variant dark {
+        box-shadow:
+            0 1px 1px -0.5px rgba(0, 0, 0, 0.15),
+            0 3px 3px -1.5px rgba(0, 0, 0, 0.18),
+            0 6px 6px -3px rgba(0, 0, 0, 0.18),
+            0 12px 12px -6px rgba(0, 0, 0, 0.18),
+            0 24px 24px -12px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.shadow-card-premium-hover {
+    box-shadow:
+        0 1px 1px -0.5px rgba(34, 37, 46, 0.03),
+        0 3px 3px -1.5px rgba(34, 37, 46, 0.04),
+        0 6px 6px -3px rgba(34, 37, 46, 0.05),
+        0 12px 12px -6px rgba(34, 37, 46, 0.05),
+        0 24px 24px -12px rgba(34, 37, 46, 0.05),
+        0 32px 48px -16px rgba(34, 37, 46, 0.08);
+    @variant dark {
+        box-shadow:
+            0 1px 1px -0.5px rgba(0, 0, 0, 0.15),
+            0 3px 3px -1.5px rgba(0, 0, 0, 0.18),
+            0 6px 6px -3px rgba(0, 0, 0, 0.2),
+            0 12px 12px -6px rgba(0, 0, 0, 0.2),
+            0 24px 24px -12px rgba(0, 0, 0, 0.2),
+            0 32px 48px -16px rgba(0, 0, 0, 0.25);
+    }
+}
+
+/* Subtle glow behind interactive emerald elements */
+.glow-emerald {
+    box-shadow: 0 8px 32px -8px rgba(13, 148, 136, 0.35);
+}
+
+.glow-emerald-soft {
+    box-shadow: 0 4px 20px -6px rgba(13, 148, 136, 0.25);
+}
+
+/* Glass-morphism card with very light border */
+.glass-card {
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(226, 232, 240, 0.7);
+}
+
+/* Dashboard metric card tints */
+.metric-tint-rose {
+    background: linear-gradient(135deg, rgba(225, 29, 72, 0.06) 0%, rgba(255, 255, 255, 0) 60%);
+    @variant dark {
+        background: linear-gradient(135deg, rgba(244, 63, 94, 0.14) 0%, rgba(34, 37, 46, 0) 60%);
+    }
+}
+
+.metric-tint-amber {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.07) 0%, rgba(255, 255, 255, 0) 60%);
+    @variant dark {
+        background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(34, 37, 46, 0) 60%);
+    }
+}
+
+.metric-tint-emerald {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.07) 0%, rgba(255, 255, 255, 0) 60%);
+    @variant dark {
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(34, 37, 46, 0) 60%);
+    }
+}
+
+.metric-tint-indigo {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.06) 0%, rgba(255, 255, 255, 0) 60%);
+    @variant dark {
+        background: linear-gradient(135deg, rgba(99, 102, 241, 0.14) 0%, rgba(34, 37, 46, 0) 60%);
+    }
+}
+
+.metric-tint-slate {
+    background: linear-gradient(135deg, rgba(100, 116, 139, 0.06) 0%, rgba(255, 255, 255, 0) 60%);
+    @variant dark {
+        background: linear-gradient(135deg, rgba(148, 163, 184, 0.12) 0%, rgba(34, 37, 46, 0) 60%);
+    }
+}
+
+/* Staggered entrance animation for dashboard sections */
+@keyframes dashboard-enter {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dashboard-enter {
+    animation: dashboard-enter 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.dashboard-enter-1 { animation-delay: 0ms; }
+.dashboard-enter-2 { animation-delay: 60ms; }
+.dashboard-enter-3 { animation-delay: 120ms; }
+.dashboard-enter-4 { animation-delay: 180ms; }
+.dashboard-enter-5 { animation-delay: 240ms; }
+.dashboard-enter-6 { animation-delay: 300ms; }
+
+/* Soft scrollbar for dashboard panels */
+.scrollbar-soft::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+.scrollbar-soft::-webkit-scrollbar-track {
+    background: transparent;
+}
+.scrollbar-soft::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.4);
+    border-radius: 10px;
+}
+.scrollbar-soft::-webkit-scrollbar-thumb:hover {
+    background: rgba(148, 163, 184, 0.6);
+}
+
+/* Hide scrollbar utility (still allows scroll) */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
